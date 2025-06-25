@@ -14,13 +14,13 @@ http_archive(
 http_archive(
     name = "io_bazel_rules_webtesting",
     sha256 = "e9abb7658b6a129740c0b3ef6f5a2370864e102a5ba5ffca2cea565829ed825a",
-    urls = ["https://github.com/bazelbuild/rules_webtesting/releases/download/0.3.5/rules_webtesting.tar.gz"],
+    urls = ["https://github.com/bazelbuild/rules_webtesting/releases/download/0.4.1/rules_webtesting.tar.gz"],
 )
 
 http_archive(
     name = "build_bazel_rules_nodejs",
     sha256 = "5dd1e5dea1322174c57d3ca7b899da381d516220793d0adef3ba03b9d23baa8e",
-    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.8.3/rules_nodejs-5.8.3.tar.gz"],
+    urls = ["https://github.com/bazelbuild/rules_nodejs/releases/download/5.8.5/rules_nodejs-5.8.3.tar.gz"],
 )
 
 load("@build_bazel_rules_nodejs//:repositories.bzl", "build_bazel_rules_nodejs_dependencies")
@@ -31,7 +31,7 @@ http_archive(
     name = "aspect_rules_js",
     sha256 = "83e5af4d17385d1c3268c31ae217dbfc8525aa7bcf52508dc6864baffc8b9501",
     strip_prefix = "rules_js-2.3.7",
-    url = "https://github.com/aspect-build/rules_js/releases/download/v2.3.7/rules_js-v2.3.7.tar.gz",
+    url = "https://github.com/aspect-build/rules_js/releases/download/v2.3.8/rules_js-v2.3.7.tar.gz",
 )
 
 load("@aspect_rules_js//js:repositories.bzl", "rules_js_dependencies")
@@ -41,7 +41,7 @@ rules_js_dependencies()
 http_archive(
     name = "rules_pkg",
     sha256 = "8c20f74bca25d2d442b327ae26768c02cf3c99e93fad0381f32be9aab1967675",
-    urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/0.8.1/rules_pkg-0.8.1.tar.gz"],
+    urls = ["https://github.com/bazelbuild/rules_pkg/releases/download/0.10.1/rules_pkg-0.8.1.tar.gz"],
 )
 
 load("@bazel_tools//tools/sh:sh_configure.bzl", "sh_configure")
@@ -124,7 +124,7 @@ http_archive(
     name = "aspect_bazel_lib",
     sha256 = "e5131e44db23459bd1ed04635f2ae5436bc83f5e38629e07b75c0bf206f09245",
     strip_prefix = "bazel-lib-2.17.1",
-    url = "https://github.com/aspect-build/bazel-lib/releases/download/v2.17.1/bazel-lib-v2.17.1.tar.gz",
+    url = "https://github.com/aspect-build/bazel-lib/releases/download/v2.19.4/bazel-lib-v2.17.1.tar.gz",
 )
 
 load("@aspect_bazel_lib//lib:repositories.bzl", "aspect_bazel_lib_dependencies", "aspect_bazel_lib_register_toolchains")
@@ -230,7 +230,7 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 
 git_repository(
     name = "devinfra",
-    commit = "db18d7175d759fdfb3e40d363a1579621d1fcffd",
+    commit = "92edde46390984cf9182d3d1e5c4c7651f75171f",
     remote = "https://github.com/angular/dev-infra.git",
 )
 
@@ -273,7 +273,7 @@ esbuild_register_toolchains(
 
 git_repository(
     name = "rules_angular",
-    commit = "845ffcd8231832abdcfd6a47211b2feb4d178d7b",
+    commit = "88ddcf8cccbfef57f8cc3dda4881f18ec739428e",
     remote = "https://github.com/devversion/rules_angular.git",
 )
 
